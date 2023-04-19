@@ -1,0 +1,26 @@
+apiVersion: core.openfunction.io/v1beta1
+kind: Function
+metadata:
+  name: function-sample
+spec:
+  version: "v2.0.0"
+  image: "tribehealth/test-function:v1"
+  imageCredentials:
+    name: push-secret
+  port: 8080 # default to 8080
+  build:
+    builder: openfunction/builder-go:latest
+    env:
+      FUNC_NAME: "TestFunction"
+      FUNC_CLEAR_SOURCE: "true"
+      # # Use FUNC_GOPROXY to set the goproxy if failed to fetch go modules
+      # FUNC_GOPROXY: "https://goproxy.cn"
+    srcRepo:
+      url: "https://github.com/tribe-health/test_function.git"
+      revision: "main"
+  serving:
+    template:
+      containers:
+        - name: function # DO NOT change this
+          imagePullPolicy: IfNotPresent
+    runtime: "knative"
