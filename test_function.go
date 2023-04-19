@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	functions.HTTP("TestFunction", TestFunction,
+	functions.HTTP("TestFunction2", TestFunction,
 		functions.WithFunctionMethods("POST"))
 }
 

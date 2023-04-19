@@ -12,7 +12,7 @@ spec:
   build:
     builder: openfunction/builder-go:latest
     env:
-      FUNC_NAME: "TestFunction"
+      FUNC_NAME: "TestFunction2"
       FUNC_CLEAR_SOURCE: "true"
       # # Use FUNC_GOPROXY to set the goproxy if failed to fetch go modules
       # FUNC_GOPROXY: "https://goproxy.cn"
