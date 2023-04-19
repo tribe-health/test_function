@@ -1,11 +1,11 @@
 apiVersion: core.openfunction.io/v1beta1
 kind: Function
 metadata:
-  name: test-function
+  name: test-function2
   namespace: openfunction
 spec:
   version: "v2.0.0"
-  image: "tribehealth/test-function:v1"
+  image: "tribehealth/test-function:v2"
   imageCredentials:
     name: push-secret
   port: 8080 # default to 8080
