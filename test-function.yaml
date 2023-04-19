@@ -1,7 +1,8 @@
 apiVersion: core.openfunction.io/v1beta1
 kind: Function
 metadata:
-  name: function-sample
+  name: test-function
+  namespace: openfunction
 spec:
   version: "v2.0.0"
   image: "tribehealth/test-function:v1"
